@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🌾 AgroMaster Quiz</title>
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+
+    <!-- START SCREEN -->
+    <div class="start-screen">
+      <h1 class="heading">AgroMasterQuiz🌾  </h1>
+    
+         <h1 class="heading2">🪴SchoolOfAgriculture🪴Kundasale </h1>
+     
+      <div class="settings">
+        <label for="num-questions">Number of Questions:</label>
+        <select id="num-questions">
+          <option value="2">2</option>
+          <option value="4" selected>4</option>
+          <option value="6">6</option>
+          <option value="8">8</option>
+          <option value="10">10</option>
+         
+        </select>
+
+        <label for="level">Select Agriculture Level:</label>
+        <select id="level">
+          <option value="upcountry">Upcountry Vegetables</option>
+          <option value="lowcountry">Low Country Vegetables</option>
+          <option value="fruit">Fruit Crops</option>
+          <option value="fertilizer">Fertilizer & Irrigation</option>
+          <option value="technology">Pest & Technology</option>
+          <option value="bee">Bee Keeping & Advanced</option>
+        </select>
+
+        <label for="time">Time per Question:</label>
+        <select id="time">
+          <option value="10">10 sec</option>
+          <option value="15">15 sec</option>
+          <option value="20">20 sec</option>
+          <option value="25">25 sec</option>
+          <option value="30" selected>30 sec</option>
+          <option value="60">60 sec</option>
+        </select>
+      </div>
+
+      <button class="btn start">Start Quiz</button>
+    </div>
+
+    <!-- QUIZ SCREEN -->
+    <div class="quiz hide">
+      <div class="timer">
+        <div class="progress">
+          <div class="progress-bar"></div>
+          <span class="progress-text"></span>
+        </div>
+      </div>
+
+      <div class="question-wrapper">
+        <div class="number">
+          Question <span class="current">1</span>/<span class="total">10</span>
+        </div>
+        <div class="question">Question text appears here</div>
+      </div>
+
+      <div class="answer-wrapper"></div>
+
+      <button class="btn submit" disabled>Submit</button>
+      <button class="btn next">Next</button>
+    </div>
+
+    <!-- END SCREEN -->
+    <div class="end-screen hide">
+      <h1 class="heading">AgroMasterQuiz🌾 </h1>
+        <h1 class="heading2">🪴SchoolOfAgriculture🪴Kundasale</h1>
+      <div class="score">
+        <span class="score-text">Your Score:</span>
+        <div><span class="final-score">0</span>/<span class="total-score">10</span></div>
+      </div>
+      <button class="btn restart">Restart Quiz</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
